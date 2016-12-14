@@ -227,7 +227,6 @@ class acpidRead(QThread) :
 				if acpid_event.status == acpid_adapter_on.status :
 					self.emit(self.signal_plugged, '')
 					break
-
 				elif acpid_event.status == acpid_adapter_off.status :
 					self.emit(self.signal_unplugged, '')
 					break
@@ -241,6 +240,7 @@ app = QApplication(sys.argv)
 acpid_adapter_on = acpidEvent()
 acpid_adapter_off = acpidEvent()
 acpid_event = acpidEvent()
+acpid_adapter_on.status = '00000001'
 
 # function called in the monitor.py file
 

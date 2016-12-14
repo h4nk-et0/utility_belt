@@ -30,7 +30,16 @@ class ueventPowerSupply() :
 
 # file location of the uevent file
 
-BATTERY_FILE = '/sys/class/power_supply/BAT1/uevent'
+BATTERY_FILE = '/sys/class/power_supply/BAT'
+
+for num in range(0,10) :
+
+
+	if os.path.exists(BATTERY_FILE + str(num) + '/uevent') :
+		BATTERY_FILE += str(num) + '/uevent'
+		break
+else :
+	sys.exit(1)
 
 # initiate all the objects
 
