@@ -4,12 +4,19 @@ It is a battery monitoring software.
 Platform :
 ==========
 
-	Works only in linux
+	Compatible for both windows and linux.
 
 Installation :
 ==============
 
-	Run the setup.py file. Then run the monitor.py file in the src folder to start the program
+	Linux :
+
+		Run the setup.py file. Then run the monitor.py file in the src folder to start the program
+		or else run the binary compiled file monitor in the dist folder
+
+	Windows :
+
+		run the monitor.exe file in the dist folder
 
 Description :
 =============
