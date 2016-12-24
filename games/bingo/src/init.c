@@ -1,5 +1,5 @@
 
-#define DATA_PATH	".utility_belt/bingo/.bingo_data"
+#define DATA_PATH	".config/utility_belt/bingo/bingo_data"
 
 void init(int *pointer_box[MAX_ROWS][MAX_COLS])
 {
@@ -18,26 +18,26 @@ void init(int *pointer_box[MAX_ROWS][MAX_COLS])
 		exit(1);
 	}
 
-	if(stat(".utility_belt/",&util_belt) == -1)
+	if(stat(".config/utility_belt/",&util_belt) == -1)
 	{
-		if(mkdir(".utility_belt",0755) == -1)
+		if(mkdir(".config/utility_belt",0755) == -1)
 		{
-			perror("can't create .utility_belt ");
+			perror("can't create utility_belt in .config/ ");
 			exit(1);
 		}
 
-		if(mkdir(".utility_belt/bingo/",0755) == -1)
+		if(mkdir(".config/utility_belt/bingo/",0755) == -1)
 		{
-			perror("can't create .utility_belt/bingo/ ");
+			perror("can't create utility_belt/bingo/ in .config/ ");
 			exit(1);
 		}
 	}
 
-	else if(stat(".utility_belt/bingo/",&util_belt) == -1)
+	else if(stat(".config/utility_belt/bingo/",&util_belt) == -1)
 	{
-		if(mkdir(".utility_belt/bingo/",0755) == -1)
+		if(mkdir(".config/utility_belt/bingo/",0755) == -1)
 		{
-			perror("can't create .utility_belt/bingo/ ");
+			perror("can't create utility_belt/bingo/ in .config/ ");
 			exit(1);
 		}
 	}
@@ -46,7 +46,7 @@ void init(int *pointer_box[MAX_ROWS][MAX_COLS])
 	{
 		if((data = fopen(DATA_PATH,"wb")) == NULL)
 		{
-			perror("can't open .bingo_data ");
+			perror("can't open bingo_data ");
 			exit(1);
 		}
 
