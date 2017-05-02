@@ -12,7 +12,7 @@ Installation :
 	Linux :
 
 		Run the setup.py file. Then run the monitor.py file in the src folder to start the program
-		or else run the binary compiled file monitor in the dist folder
+		or else run the binary compiled file monitor in the dist folder.
 
 	Windows :
 
